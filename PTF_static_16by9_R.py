@@ -45,6 +45,6 @@ rotated_map = np.rot90(divergence_map, k=-1)
 cmap = LinearSegmentedColormap.from_list("custom_cmap", ["black", "white"]) # 커스텀 컬러맵 생성: 발산은 흰색, 수렴은 검은색
 plt.imshow(rotated_map.T, extent=[y0 - eps_y, y0 + eps_y, x0 - eps, x0 + eps], origin='lower', cmap=cmap)
 plt.axis('off')  # 축 라벨과 타이틀 제거
-filename = f"mytetration_x_{x0}_y_{y0}_eps_{eps}_rotated.png"
+filename = f"mytetration_x_{x0}_y_{y0}_eps_{eps}.png"
 plt.savefig(filename, dpi=600, bbox_inches='tight', pad_inches=0)
 plt.show()
