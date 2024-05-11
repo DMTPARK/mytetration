@@ -3,7 +3,7 @@ Make your own tetration Image!
 
 # 목차
 - [**프로그램 설치**](#프로그램-설치)
-- 
+- [나만의 Power Tower Fratal](#power-tower-fractal)
 - [test](#test)
 
 ## 프로그램 설치
@@ -48,7 +48,7 @@ Make your own tetration Image!
   - `python3 -c "import matplotlib; print(matplotlib.__version__)"`
 
 
-## test
+## 나만의 Power Tower Fratal
  
 
 
