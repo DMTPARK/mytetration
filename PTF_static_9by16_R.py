@@ -6,7 +6,7 @@ from matplotlib.colors import LinearSegmentedColormap
 x0 = 0
 y0 = 0 #(x0,y0) : plot영역 중심좌표
 eps = 5 #x0 좌우로 eps만큼 plot함
-eps_y = eps * (9/16)  # 16:9 비율에 맞추기 위해 y축 eps 계산
+eps_y = eps * (9/16)  # 9:16 비율에 맞추기 위해 y축 eps 계산
 n = 500 #화소수조절을 위한 parameter (3840:4K, 1920:Full HD)
 nx, ny = n, int(n*(9/16)) #nx, ny : x,y축 화소수
 
