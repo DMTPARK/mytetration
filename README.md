@@ -4,7 +4,6 @@ Make your own tetration Image!
 # 목차
 - [**프로그램 설치**](#프로그램-설치)
 - [**나만의 Power Tower Fractal을 만들어보자**](#나만의-power-tower-fractal을-만들어보자)
-- [test](#test)
 
 ## 프로그램 설치
 - mytetration 챌린지에 필요한 프로그램은 총 4가지 입니다 : Visual Studio[^1], Python, NumPy, Matplotlib
@@ -47,9 +46,7 @@ Make your own tetration Image!
   - `python3 -c "import numpy; print(numpy.__version__)"`
   - `python3 -c "import matplotlib; print(matplotlib.__version__)"`
 
-
 ## 나만의 Power Tower Fractal을 만들어보자
- 
 
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
