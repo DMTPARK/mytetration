@@ -3,7 +3,7 @@ Make your own tetration Image!
 
 # 목차
 - [**프로그램 설치**](#프로그램-설치)
-- [나만의 Power Tower Fractal](#나만의-power-tower-fractal)
+- [**나만의 Power Tower Fractal**](#나만의-power-tower-fractal)
 - [test](#test)
 
 ## 프로그램 설치
