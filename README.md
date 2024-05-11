@@ -52,7 +52,13 @@
 - 터미널에 다음과 같은 명령어를 입력하면 코드가 실행됩니다 : `python3 PTF_static_1by1_H.py`
 - 컴퓨터 사양에 따라 실행시간에 다소 차이가 날 수 있으며, 실행이 완료되면 바탕화면에 아래와 같은 결과와 함께 `mytetration_x_0_y_0_eps_5.png`라는 이름의 이미지 파일이 생성됩니다 :![Sample Result](Power%20Tower%20Fractal%20(static)/sample/mytetration_x_0_y_0_eps_5.png)
 ---
+### PTF세계로의 여행
+
+
+---
 ### SNS 업로드 규칙
+
+---
 
 
 
