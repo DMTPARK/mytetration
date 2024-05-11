@@ -1,6 +1,3 @@
-# mytetration
-Make your own tetration Image!
-
 # 목차
 - [**프로그램 설치**](#프로그램-설치)
 - [**나만의 Power Tower Fractal을 만들어보자**](#나만의-power-tower-fractal을-만들어보자)
