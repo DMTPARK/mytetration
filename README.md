@@ -50,17 +50,22 @@
 - [첫번째 코드](Power Tower Fractal (static)/PTF_static_1by1_H.py) 전체를 그대로 복사해서 VS에 띄어진 text창에 붙여넣기 하세요.
 - 이 text 파일을 바탕화면에 `PTF_static_1by1_H.py`라는 이름으로 지정하세요.
 - 터미널에 다음과 같은 명령어를 입력하면 코드가 실행됩니다 : `python3 PTF_static_1by1_H.py`
-- 컴퓨터 사양에 따라 실행시간에 다소 차이가 날 수 있으며, 실행이 완료되면 바탕화면에 아래와 같은 결과와 함께 `mytetration_x_0_y_0_eps_5.png`라는 이름의 이미지 파일이 생성됩니다 :![Sample Result](Power%20Tower%20Fractal%20(static)/sample/mytetration_x_0_y_0_eps_5.png)
+- 실행이 완료되면 결과 이미지가 'Figure 1'이라는 이름의 창으로 뜨고, 바탕화면에는 `mytetration_x_0_y_0_eps_5.png`라는 이름의 이미지 파일이 생성됩니다 :![Sample Result](Power%20Tower%20Fractal%20(static)/sample/mytetration_x_0_y_0_eps_5.png)
 ---
 ### PTF세계로의 여행
-
+- 원하는 이미지를 출력하기 위한 주요변수들의 역할을 살펴보겠습니다.
+  - `n`은 x축 화소수를 결정합니다. 16:9 비율에서 `n=3840`으로 설정하면 4K화질로 출력할 수 있습니다. rendering시간은 컴퓨터 사양에 따라 상당한 차이가 있으며, 원하는 화질과 rendering시간을 고려하여 적절한 `n`값을 설정하세요.
+  - `x0`와 `y0`는 이미지 중심의 (x,y)좌표이며 `eps`는 출력범위를 설정합니다. x축방향으로의 출력범위는 x0-eps부터 x0_eps까지 입니다.
+- rendering이 끝났을때 뜨는 'Figure 1'창에서 확대를 원하는 부분의 좌표를 확인 할 수 있습니다. 해당창을 클릭하고 마우스로 이미지를 훑어보면, 우측하단에 해당위치의 (x,y)좌표가 표시됩니다. 원하는 부분의 좌표를 원래코드의 변수 `x0`, `y0`에 입력하고, 확대정도는 `eps`변수를 통해 정합니다. 만약 10배 확대하고 싶으면 `eps=1e-1` 100배 확대하고 싶으면 `eps=1e-2`로 설명하면 됩니다.
 
 ---
 ### SNS 업로드 규칙
 
 ---
+### Notes
+- 
 
-
+---
 
 
 
