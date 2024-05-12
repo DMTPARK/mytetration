@@ -75,7 +75,7 @@
 
 - PTF 확대영상 만들기
   - PFT의 특정지점으로 확대해 들어가는 영상을 만드시려면, 다음 코드을 이용해 주세요 :
-  - 새로운 확대지점 찾는법 :
+    - 새로운 확대지점 찾는법 :
     - 
   - rendring 시간 / 연속 rendering 방법
 
@@ -83,4 +83,4 @@
 - 
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
-[^2]: [Peter Lych 교수의 논문]([https://maths.ucd.ie/~plynch/Publications/PowerTower.pdf](https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=HBT8xvUAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=HBT8xvUAAAAJ:5Ul4iDaHHb8C))을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
+[^2]: Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
