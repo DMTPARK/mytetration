@@ -5,7 +5,7 @@ from matplotlib.colors import LinearSegmentedColormap
 #parameters - plot영역설정관련
 x0 = 0
 y0 = 0 #(x0,y0) : plot영역 중심좌표
-eps = 5 #x0 좌우로 eps만큼 plot함
+eps = 5e1 #x0 좌우로 eps만큼 plot함
 n = 500 #화소수조절을 위한 parameter (3840:대략 4K화질, 1920:Full HD 화질)
 
 #parameters - tetration계산 관련
