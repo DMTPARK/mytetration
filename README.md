@@ -86,9 +86,16 @@
 
 ## 또 다른 미지의 세계를 향해..
 저는 수학을 업으로 하는 사람이 아님에도 불구하고, 알려지지 않은 tetration의 세로운 몇몇 구조들을 어렵지 않게 발견 할 수 있었습니다. 최근에 발견한 한가지는 이런겁니다 : √2의 무한층은 그 값이 2입니다. 이때 가장 윗층을 변수 x로 두면, x가 2보다 작을때는 함수가 2로 수렴하고, x가 2일 때는 그 값이 4이고, 2보다 클때는 무한대로 발산합니다. 이러한 사실은 'cobweb plot'이라는 간단한 그래프분석을 통해 알 수 있는데요 - 상세한 설명은 [관련한 블로그 포스팅](https://dmtpark.tistory.com/52)이 있으니 참조바랍니다. 실수에 대한 그래프를 그리고나서는, 그 함수의 수렴/발산지도가 복소평면에서 어떻게 그려지는지가 궁금했습니다. 이전에 PTF을 재미있게 가지고 놀았던 경험이 있었던 저로써는, 당연한 생각의 전개였습니다. 그리고 저는 기존 PTF코딩을 바탕으로 빠르게 [새로운 코드](go%20further/PTF_sqrt2.py)를 짤 수 있었고, 다음과 같은 결과를 얻을 수 있었죠 : 
-![Sample Result](go%20further/sample%20image%20for%20'PTF_sqrt2.py'.png)
+![Sample Result](go%20further/Sample%20Image%20for%20'PTF_sqrt2.py'.png)
 
+이어서 [프랙탈 확대영상](https://youtu.be/ZeR_YyzMMk0?si=36AoZO285hhPzRp7)도 만들었는데요, 제가 아는한 이런 함수에 대한 수렴/발산지도를 출력한 사례는 없습니다. 그리고 밑을 바꾼다거나 함수형태를 조금씩 변형하면서 비슷한 작업을 해본다면, 아마 당신은 어떤 새로운 수학적 형태를 인류최초로 출력 할 수 있게 될겁니다.
 
+어떤 수학적 기준으로 PTF에 색을 입힐 수도 있습니다. tetration에 대한 위키피디아 문서에 가보면, 
+  - [tetratio.org](https://tetration.org/index.php/Main_Page)
+  - [myweb.astate.edu/wpaulsen/tetration.html](http://myweb.astate.edu/wpaulsen/tetration.html)
+  - [Asymptotic Solutions of the Tetration Equation (2022, Nixon)](https://arxiv.org/abs/2208.05328)
+  - [Tetration for complex bases (2018, Paulsen)](https://link.springer.com/article/10.1007/s10444-018-9615-7)
+  - [Towering Fractals(2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
 [^2]: Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
