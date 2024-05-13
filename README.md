@@ -98,7 +98,7 @@
 - [Tetration for complex bases (2018, Paulsen)](https://link.springer.com/article/10.1007/s10444-018-9615-7)
 - [Towering Fractals(2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
 
-다음은 제가 tetration 관련 포스팅과 영상들 입니다 : 
+다음은 지금까지 publish된 DMT PARK의 tetration 관련 포스팅과 영상 입니다 : 
 - [2=4임을 증명하는 영상](https://youtu.be/QFg9_4sPm84)
 - [2=4임을 증명해보자 (해답)](https://dmtpark.tistory.com/20)
 - [재미있는 수학퀴즈 - Geometric Evaluation of a Limit](https://dmtpark.tistory.com/18)
