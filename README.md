@@ -115,5 +115,5 @@
 - [divergence map of infinite tetration](https://youtu.be/ZeR_YyzMMk0)
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
-[^2]: [Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)](efaidnbmnnnibpcajpcglclefindmkaj/https://maths.ucd.ie/~plynch/Publications/PowerTower.pdf)을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
+[^2]: [Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)]([efaidnbmnnnibpcajpcglclefindmkaj/https://maths.ucd.ie/~plynch/Publications/PowerTower.pdf](https://maths.ucd.ie/~plynch/Publications/PowerTower.pdf))을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
 [^3]: [DMT PARK의 tetration 영상](https://youtu.be/mIxrcXrrxAI)을 보면, 특정 복소수의 무한층 tetration은 여러개의 값으로 수렴하기도 합니다. 아마 'period'라는 것은 수렴값의 갯수에 따라 색을 입힌것 같고, 'escape'은 얼마나 빠르게 발산하는지를 기준으로 색을 나눈것으로 보입니다.
