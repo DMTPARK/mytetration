@@ -1,5 +1,5 @@
 # 목차
-- [**프로그램 설치**](#프로그램-설치) : [Visual Studio](#Visual-Studio), [Python](#Python), [NumPy, Matplotlib](#NumPy,-Matplotlib)
+- [**프로그램 설치**](#프로그램-설치) : [Visual Studio](#Visual-Studio), [Python](#Python), [NumPy, Matplotlib](#NumPy와-Matplotlib)
 - [**나만의 Power Tower Fractal을 만들어보자**](#나만의-power-tower-fractal을-만들어보자)
 - [**SNS 업로드 규칙**](#SNS-업로드-규칙)
 - [**PTF코드에 대한 코멘트**](#PTF코드에-대한-코멘트)
@@ -42,7 +42,7 @@
 5. Visual Studio 실행 후 상단에 보기(View) 메뉴에서 터미널(Terminal)을 클릭하면 화면하단에 터미널 창이 나타납니다.
 6. 터미널창에 `python3 --version`과 `pip3 --version`을 입력하여 파이썬과 pip이 정상적으로 설치되었는지 확인할 수 있습니다.
 ---
-## NumPy, Matplotlib
+## NumPy와 Matplotlib
 **NumPy, Matplotlib 설치**
 - 다음명령어를 터미널에 입력하여 NumPy와 Matplotlib를 설치합니다 : `pip3 install numpy matplotlib`
 - 설치가 완료되면 터미널에 다음 명령어를 입력하여 각각의 버젼을 확인하여 설치완료여부를 확인 할 수 있습니다 :
