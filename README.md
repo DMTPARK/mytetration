@@ -90,12 +90,29 @@
 
 이어서 [프랙탈 확대영상](https://youtu.be/ZeR_YyzMMk0?si=36AoZO285hhPzRp7)도 만들었는데요, 제가 아는한 이런 함수에 대해 수렴/발산지도를 출력한 사례는 없습니다.이는 하나의 단편적 사례입니다. 저는 기존에 알려져 있지 않은 Power Tower Fractal의 특정영역을 확대 해 들어가면서, [완전히 새로운 패턴](https://youtu.be/PROONug8hCM)들을 발견 할 수 있었습니다. 
 
-이런 경험 속에서 저는, tetration 속엔 인류가 전혀 본적 없는 패턴들로 가득차있음을 느꼈습니다. 패턴 뿐아니라, color도 입힐 수 있습니다. [tetration에 대한 위키피디아 문서](https://en.wikipedia.org/wiki/Tetration)를 보면, ['period'](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_period.png)와 ['escape'](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_escape.png)을 기준으로 PTF의 영역들을 색상으로 나운 이미지가 있습니다[^3]. 이런식으로 얼마든지 tetration에 대한 새롭고 다양한 이미지들을 만들어 볼 수 있을 겁니다. 여러분의 탐구를 위해 도움이 될 수 있는 참조사이트나 문헌몇가지를 소개 드립니다 :
-  - [tetratio.org](https://tetration.org/index.php/Main_Page)
-  - [myweb.astate.edu/wpaulsen/tetration.html](http://myweb.astate.edu/wpaulsen/tetration.html)
-  - [Asymptotic Solutions of the Tetration Equation (2022, Nixon)](https://arxiv.org/abs/2208.05328)
-  - [Tetration for complex bases (2018, Paulsen)](https://link.springer.com/article/10.1007/s10444-018-9615-7)
-  - [Towering Fractals(2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
+이런 경험 속에서 저는, tetration 속엔 인류가 전혀 본적 없는 패턴들로 가득차있음을 느꼈습니다. 패턴 뿐아니라, color도 입힐 수 있습니다. [tetration에 대한 위키피디아 문서](https://en.wikipedia.org/wiki/Tetration)를 보면, '[period](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_period.png)'와 '[escape](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_escape.png)'을 기준으로 PTF의 영역들을 색상으로 나운 이미지가 있습니다[^3]. 이런식으로 얼마든지 tetration에 대한 새롭고 다양한 이미지들을 만들어 볼 수 있을 겁니다. 여러분의 탐구를 위해 도움이 될 수 있는 참조사이트나 문헌몇가지를 소개 드립니다 :
+- [tetratio.org](https://tetration.org/index.php/Main_Page)
+- [Infinite Tetration (GeoGebra project, Mullen)](https://www.geogebra.org/m/VvxMzPvD)
+- [myweb.astate.edu/wpaulsen/tetration.html](http://myweb.astate.edu/wpaulsen/tetration.html)
+- [Asymptotic Solutions of the Tetration Equation (2022, Nixon)](https://arxiv.org/abs/2208.05328)
+- [Tetration for complex bases (2018, Paulsen)](https://link.springer.com/article/10.1007/s10444-018-9615-7)
+- [Towering Fractals(2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
+
+다음은 제가 tetration 관련 포스팅과 영상들 입니다 : 
+- [2=4임을 증명하는 영상](https://youtu.be/QFg9_4sPm84)
+- [2=4임을 증명해보자 (해답)](https://dmtpark.tistory.com/20)
+- [재미있는 수학퀴즈 - Geometric Evaluation of a Limit](https://dmtpark.tistory.com/18)
+- [학교에서 가르쳐주지 않는 연산](https://youtu.be/mIxrcXrrxAI)
+- [역사상 최고의 수학자도 풀지못한 문제](https://youtu.be/PROONug8hCM)
+- [역사상 최고의 수학자도 알 수 없었던 함수](https://youtube.com/shorts/GPe9Lt8OAdM)
+- [infinite power tower 함수의 그래프를 그려보자](https://dmtpark.tistory.com/19)
+- [복소 tetration 연산이 나타내는 놀랍도록 다양한 형태, 그리고 프랙탈](https://dmtpark.tistory.com/21)
+- [Power Tower Fractal](https://dmtpark.tistory.com/22)
+- [허수를 탑처럼 쌓으면 나타나는 놀라운 형태](https://youtube.com/shorts/AiPeMBZbvKw)
+- ['허수의 삼중나선'에 대한 몇가지 질문](https://dmtpark.tistory.com/23)
+- [tetration 표현법에 대한 제안](https://dmtpark.tistory.com/47)
+- [<sup>∞</sup>√2에 대한 흥미로운 성질들](https://dmtpark.tistory.com/52)
+- [divergence map of infinite tetration](https://youtu.be/ZeR_YyzMMk0)
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
 [^2]: Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
