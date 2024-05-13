@@ -1,5 +1,5 @@
 # 목차
-- [**프로그램 설치**](#프로그램-설치) : [Visual Studio](#Visual-Studio), [Python](#Python), [NumPy와 Matplotlib](#NumPy와-Matplotlib)
+- [**프로그램 설치**](#프로그램-설치) : [Visual Studio](#Visual-Studio) / [Python](#Python) / [NumPy와 Matplotlib](#NumPy와-Matplotlib)
 - [**나만의 Power Tower Fractal을 만들어보자**](#나만의-power-tower-fractal을-만들어보자)
 - [**SNS 업로드 규칙**](#SNS-업로드-규칙)
 - [**PTF코드에 대한 코멘트**](#PTF코드에-대한-코멘트)
