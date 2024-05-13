@@ -77,8 +77,8 @@
   - 아직 정확한 원인을 파악하지는 못했으나, 개인적으론 NumPy가 긴 숫자를 처리하는 방식에서 발생하는 문제일것이라 예상하고 있습니다. [몇 시간동안 이어지는 망델브로트 집합 확대영상](https://youtu.be/Q5eRDR7oonY?si=CDBRsP84xGwe0M55) 같은 결과를 얻고자 한다면[^2], 나름의 연구와 코드개선이 필요할 것으로 보입니다.
 
 - PTF 확대영상 만들기
-  - PFT의 특정지점으로 확대해 들어가는 영상을 만드시려면, 다음 코드을 이용해 주세요 : [PTF_zoom.py](Power%20Tower%20Fractal%20(zoom-in)/PTF_zoom.py)
-    - 새로운 확대지점 찾는법 : [Power Tower Fractal (static)](Power%20Tower%20Fractal%20(static)) 코드를 실행 했을때 뜨는 'Figure 1'창에서 확대하고 싶은 부분의 (x,y)좌표를 찾아들어가세요. `eps`를 통해 확대정도를 키우면서 작업을 반복하면 됩니다.
+  - [PFT의 특정지점으로 확대해 들어가는 영상](https://youtu.be/mIxrcXrrxAI?si=eu8aOKr6y-2A9d-q&t=1355)을 만드시려면, 다음 코드을 이용해 주세요 : [PTF_zoom.py](Power%20Tower%20Fractal%20(zoom-in)/PTF_zoom.py)
+    - 새로운 확대지점 찾는법 : [Power Tower Fractal (static)](Power%20Tower%20Fractal%20(static)) 코드를 실행 했을때 뜨는 'Figure 1'창에서 확대하고 싶은 부분의 (x,y)좌표를 확인하고, `eps`를 통해 10배정도씩 확대해 들어가세요. 그 작업을 반복하면서 원하는 지점까지 확대해 들어가서 최종목표좌표 (`px_target`,`py_target`)을 설정합니다.
     - 부드러운 zoom-in 영상을 얻기 위해선 frame 당 확대정도를 나타내는 `zoom-factor`를 가능한 1에 가깝게 해야 합니다. 하지만 그렇게 되면 최종 확대지점까지 필요한 총 frame 수가 들어나게 되고 rendering 시간도 그만큼 늘게됩니다. 경험상, 4K해상도로 600~700frame 정도 rendering 하기위해 왠만한 고성능 컴퓨터도 1주일을 훌쩍 넘어갈겁니다. 컴퓨터 여러대를 동시에 돌리는등 frame을 나누어서 rendering 하고자 한다면, `start_frame`과 `end_frame`을 통해 시작과 끝 frame을 설정해줄 수 있습니다.
 
 - 파워타워함수는 무한층의 tetration 이므로, 이론적으로 `max_iter`의 값은 무한대여야 합니다. 하지만 어떤 컴퓨터도 '무한'을 계산할수는 없으므로, 적절한 한계를 정해줘야 합니다. `eps`가 10<sup>-5</sup> 정도에서는 `max_iter = 500` 정도면 충분해 보입니다. 그 이상의 층을 계산해도 결과이미지는 크게 차이나지 않습니다. 하지만 확대 order가 커질수록 눈에띄는 차이를 만들어 내는데요, 관련한 결과 이미지와 코멘트는 [이전 블로스 포스팅](https://dmtpark.tistory.com/59)을 참조 바랍니다.
