@@ -85,12 +85,12 @@
 - 파워타워함수는 무한층의 tetration 이므로, 이론적으로 `max_iter`의 값은 무한대여야 합니다. 하지만 어떤 컴퓨터도 '무한'을 계산할수는 없으므로, 적절한 한계를 정해줘야 합니다. `eps`가 10<sup>-5</sup> 정도에서는 `max_iter = 500` 정도면 충분해 보입니다. 그 이상의 층을 계산해도 결과이미지는 크게 차이나지 않습니다. 하지만 확대 order가 커질수록 눈에띄는 차이를 만들어 내는데요, 관련한 결과 이미지와 코멘트는 [이전 블로스 포스팅](https://dmtpark.tistory.com/59)을 참조 바랍니다.
 
 ## 또 다른 미지의 세계를 향해..
-저는 수학을 업으로 하는 사람이 아님에도 불구하고, 알려지지 않은 tetration의 세로운 몇몇 구조들을 어렵지 않게 발견 할 수 있었습니다. 최근에 발견한 한가지는 이런겁니다 : √2의 무한층은 그 값이 2입니다. 이때 가장 윗층을 변수 x로 두면, x가 2보다 작을때는 함수가 2로 수렴하고, x가 2일 때는 그 값이 4이고, 2보다 클때는 무한대로 발산합니다. 이러한 사실은 'cobweb plot'이라는 간단한 그래프분석을 통해 알 수 있는데요 - 상세한 설명은 [관련한 블로그 포스팅](https://dmtpark.tistory.com/52)이 있으니 참조바랍니다. 실수에 대한 그래프를 그리고나서는, 그 함수의 수렴/발산지도가 복소평면에서 어떻게 그려지는지가 궁금했습니다. 이전에 PTF을 재미있게 가지고 놀았던 경험이 있었던 저로써는, 당연한 생각의 전개였습니다. 그리고 저는 기존 PTF코딩을 바탕으로 빠르게 [새로운 코드](go%20further/PTF_sqrt2.py)를 짤 수 있었고, 다음과 같은 결과를 얻을 수 있었죠 : 
+저는 수학을 업으로 하는 사람이 아님에도, 알려지지 않은 tetration의 새로운 몇몇 구조들을 어렵지 않게 발견 할 수 있었습니다. 최근에 발견한 한가지를 소개드립니다 : √2의 무한층은 그 값이 2입니다. 이때 가장 윗층을 변수 x로 두면, x가 2보다 작을때는 함수가 2로 수렴하고, x가 2일 때는 그 값이 4이고, 2보다 클때는 무한대로 발산합니다. 이러한 사실은 'cobweb plot'이라는 간단한 그래프분석을 통해 알 수 있는데요 - 상세한 설명은 [관련한 블로그 포스팅](https://dmtpark.tistory.com/52)이 있으니 참조바랍니다. Power Tower Fractal을 재밋게 가지고 놀던 경험이 있던 저는, 당연히 그 함수의 수렴/발산지도가 복소평면에서 어떻게 그려지는지가 궁금했습니다. 그리고 저는 기존 PTF코드을 바탕으로 바로 [새로운 코드](go%20further/PTF_sqrt2.py)를 짤 수 있었고, 다음과 같은 결과를 얻을 수 있었죠 : 
 ![Sample Result](go%20further/Sample%20Image%20for%20'PTF_sqrt2.py'.png)
 
-이어서 [프랙탈 확대영상](https://youtu.be/ZeR_YyzMMk0?si=36AoZO285hhPzRp7)도 만들었는데요, 제가 아는한 이런 함수에 대한 수렴/발산지도를 출력한 사례는 없습니다. 그리고 밑을 바꾼다거나 함수형태를 조금씩 변형하면서 비슷한 작업을 해본다면, 아마 당신은 어떤 새로운 수학적 형태를 인류최초로 출력 할 수 있게 될겁니다.
+이어서 [프랙탈 확대영상](https://youtu.be/ZeR_YyzMMk0?si=36AoZO285hhPzRp7)도 만들었는데요, 제가 아는한 이런 함수에 대해 수렴/발산지도를 출력한 사례는 없습니다.이는 하나의 단편적 사례입니다. 저는 기존에 알려져 있지 않은 Power Tower Fractal의 특정영역을 확대 해 들어가면서, [완전히 새로운 패턴](https://youtu.be/PROONug8hCM)들을 발견 할 수 있었습니다. 
 
-어떤 수학적 기준으로 PTF에 색을 입힐 수도 있습니다. tetration에 대한 위키피디아 문서에 가보면, 
+이런 경험 속에서 저는, tetration 속엔 인류가 전혀 본적 없는 패턴들로 가득차있음을 느꼈습니다. 패턴 뿐아니라, color도 입힐 수 있습니다. [tetration에 대한 위키피디아 문서](https://en.wikipedia.org/wiki/Tetration)를 보면, ['period'](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_period.png)와 ['escape'](https://en.wikipedia.org/wiki/Tetration#/media/File:Tetration_escape.png)을 기준으로 PTF의 영역들을 색상으로 나운 이미지가 있습니다[^3]. 이런식으로 얼마든지 tetration에 대한 새롭고 다양한 이미지들을 만들어 볼 수 있을 겁니다. 여러분의 탐구를 위해 도움이 될 수 있는 참조사이트나 문헌몇가지를 소개 드립니다 :
   - [tetratio.org](https://tetration.org/index.php/Main_Page)
   - [myweb.astate.edu/wpaulsen/tetration.html](http://myweb.astate.edu/wpaulsen/tetration.html)
   - [Asymptotic Solutions of the Tetration Equation (2022, Nixon)](https://arxiv.org/abs/2208.05328)
@@ -99,3 +99,4 @@
 
 [^1]: 다른 IDE를 사용하셔도 됩니다. 초보자분들을 위해 대표적인 프로그램을 선정한것입니다.
 [^2]: Peter Lych 교수의 논문(The fractal boundary of the power tower function, 2017)을 보면, PTF이 망델브로트 프랙탈보다 계산이 어려운 근본적 이유가 있는듯 보입니다. 필자는 아직 그 이유를 이해하진 못했지만, 망델브로트 프랙탈 확대영상처럼 시원시원하게 확대되는 PFT 확대영상을 만들고자 한다면 상당한 연구와 노력이 필요할 것으로 보입니다.
+[^3] [DMT PARK의 tetration 영상](https://youtu.be/mIxrcXrrxAI)을 보면, 특정 복소수의 무한층 tetration은 여러개의 값으로 수렴하기도 합니다. 아마 'period'라는 것은 수렴값의 갯수에 따라 색을 입힌것 같고, 'escape'은 얼마나 빠르게 발산하는지를 기준으로 색을 나눈것으로 보입니다.
