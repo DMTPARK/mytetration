@@ -98,7 +98,7 @@
 - [myweb.astate.edu/wpaulsen/tetration.html](http://myweb.astate.edu/wpaulsen/tetration.html)
 - [Asymptotic Solutions of the Tetration Equation (2022, Nixon)](https://arxiv.org/abs/2208.05328)
 - [Tetration for complex bases (2018, Paulsen)](https://link.springer.com/article/10.1007/s10444-018-9615-7)
-- [Towering Fractals(2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
+- [Towering Fractals (2023, Joby)](https://mapletransactions.org/index.php/maple/article/view/17003/13021)
 
 다음은 지금까지 publish된 DMT PARK의 tetration 관련 포스팅과 영상 입니다 : 
 - [2=4임을 증명하는 영상](https://youtu.be/QFg9_4sPm84)
