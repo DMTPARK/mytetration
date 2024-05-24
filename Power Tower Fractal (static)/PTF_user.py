@@ -80,8 +80,8 @@ def compute_tetration_divergence(n, max_iter, escape_radius):
 #tetration 계산
 divergence_map = compute_tetration_divergence(n, max_iter, escape_radius)
 
-if rot == "Y" or "y":
-    rotated_map = np.rot90(divergence_map, k=-1)
+if rot == "Y" or rot == "y":
+    divergence_map = np.rot90(divergence_map, k=-1)
 
 #plot
 cmap = LinearSegmentedColormap.from_list("custom_cmap", ["black", "white"]) # 커스텀 컬러맵 생성: 발산은 흰색, 수렴은 검은색
