@@ -17,18 +17,22 @@ GPU(3050Ti Laptop) 이 *14배 정도 빠른 듯 합니다.
 
 ***
 
+___ 
 == CPU ==
-C:\~~~>ptf2.py
-Calculating Tetration:   4%|█▋                                     | 21/500 [00:00<00:07, 60.36it/s]C:\~~~\ptf2.py:28: RuntimeWarning: overflow encountered in power
+C:\Users\creer\OneDrive\Desktop>ptf2.py
+Calculating Tetration:   4%|█▋                                     | 21/500 [00:00<00:07, 60.36it/s]C:\Users\creer\OneDrive\Desktop\ptf2.py:28: RuntimeWarning: overflow encountered in power
   z = np.power(c, z)
-C:\~~~\ptf2.py:28: RuntimeWarning: invalid value encountered in power
+C:\Users\creer\OneDrive\Desktop\ptf2.py:28: RuntimeWarning: invalid value encountered in power
   z = np.power(c, z)
 Calculating Tetration: 100%|██████████████████████████████████████| 500/500 [00:07<00:00, 69.74it/s]
 
+___
 
+== GPU ==
 
-C:\~~~>ptf2_cuda.py
+C:\Users\creer\OneDrive\Desktop>ptf2_cuda.py
 Calculating Tetration: 100%|█████████████████████████████████████| 500/500 [00:00<00:00, 937.47it/s]
 
-C:\~~~>ptf2_cuda.py
+C:\Users\creer\OneDrive\Desktop>ptf2_cuda.py
 Calculating Tetration: 100%|████████████████████████████████████| 500/500 [00:00<00:00, 1053.61it/s]
+
