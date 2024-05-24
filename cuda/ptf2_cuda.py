@@ -8,7 +8,7 @@ x0 = -0.188427
 y0 = 0.234446  # (x0,y0) : 플롯 영역 중심 좌표
 eps = 5e-3  # x0 좌우로 eps만큼 플롯함
 eps_y = eps * (9/16)  # 16:9 비율에 맞추기 위해 y축 eps 계산
-n = 500  # 화소수 조절을 위한 파라미터 (3840:4K, 1920:Full HD)
+n = 1920  # 화소수 조절을 위한 파라미터 (3840:4K, 1920:Full HD)
 nx, ny = n, int(n * (9/16))  # nx, ny : x, y축 화소수
 
 # 파라미터 - 테트레이션 계산 관련
@@ -20,12 +20,13 @@ def compute_tetration_divergence(nx, ny, max_iter, escape_radius):
     x = cp.linspace(x0 - eps, x0 + eps, nx)
     y = cp.linspace(y0 - eps_y, y0 + eps_y, ny)
     c = x[:, cp.newaxis] + 1j * y[cp.newaxis, :]
+    z = cp.empty_like(c)
+    z[:] = c
 
     divergence_map = cp.zeros(c.shape, dtype=cp.bool_)
-    z = c.copy()
 
     for k in tqdm(range(max_iter), desc="Calculating Tetration", ncols=100):
-        z = cp.power(c, z)
+        cp.power(c, z, out=z)
         mask = cp.abs(z) > escape_radius
         divergence_map[mask] = True
         c[mask] = cp.nan  # Escape from further computation for diverged points
