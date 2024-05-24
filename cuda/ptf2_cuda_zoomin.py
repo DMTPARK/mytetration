@@ -37,11 +37,14 @@ def plot_tetration(ax, x0, y0, eps, eps_y):
     divergence_map = compute_tetration_divergence(nx, ny, max_iter, escape_radius, x0, y0, eps, eps_y)
     cmap = LinearSegmentedColormap.from_list("custom_cmap", ["black", "white"])
     ax.clear()
-    ax.imshow(cp.asnumpy(divergence_map).T, extent=[x0 - eps, x0 + eps, y0 - eps_y, y0 + eps_y], origin='lower', cmap=cmap)
+    img = ax.imshow(cp.asnumpy(divergence_map).T, extent=[x0 - eps, x0 + eps, y0 - eps_y, y0 + eps_y], origin='lower', cmap=cmap)
     ax.set_xlabel('Re')
     ax.set_ylabel('Im')
     ax.set_title(f"Tetration Plot at x={x0}, y={y0}, eps={eps}")
     plt.draw()
+    plt.pause(0.01)  # 업데이트를 위해 잠시 대기
+
+    return img
 
 # 클릭 이벤트 핸들러
 clicks = []
@@ -51,6 +54,8 @@ cid = None
 def on_click(event):
     global clicks, rect, cid
     if event.inaxes:
+        if event.dblclick:  # 더블 클릭인 경우 아무 일도 하지 않음
+            return
         clicks.append((event.xdata, event.ydata))
         if len(clicks) == 2:
             plt.gcf().canvas.mpl_disconnect(cid)
@@ -59,7 +64,7 @@ def on_click(event):
             plt.gcf().canvas.flush_events()
             update_plot()
         elif len(clicks) == 1:
-            rect = plt.Rectangle(clicks[0], 0, 0, linewidth=1, edgecolor='r', facecolor='none')
+            rect = plt.Rectangle(clicks[0], 0, 0, linewidth=2, edgecolor='r', facecolor='none')  # 사각형 두께를 2로 변경
             event.inaxes.add_patch(rect)
             plt.draw()
 
@@ -81,6 +86,7 @@ def update_plot():
     eps = abs(x2 - x1) / 2
     eps_y = abs(y2 - y1) / 2
 
+    plt.title("Calculating...")  # 플롯 제목만 업데이트
     plot_tetration(ax, x0, y0, eps, eps_y)
     clicks = []
     rect = None
