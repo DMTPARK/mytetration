@@ -1,4 +1,4 @@
-# 프로젝트명
+# CUDA 명령어용 실행파일 (for Nvidia GPU)
 
 ## 요구 사항
 1. NVIDIA GPU 설치
