@@ -6,7 +6,7 @@
 3. 라이브러리 설치:
    - `pip install cupy`는 컴파일 과정을 거쳐 오래 걸리고 실패 가능성이 있습니다. 
    - 바이너리 설치를 권장합니다: `pip install cupy-cuda11x` 또는 `pip install cupy-cuda12x` (툴킷 버전에 따라)
-   - 그 외에도 tqdm, tkinter 등의 라이브러리가 설치되어 있어야 합니다.
+   - 그 외에도 `tqdm`, `tkinter` 등의 라이브러리가 설치되어 있어야 합니다.
 
 **Note:** ChatGPT에 의해 수정되었으며, 자세한 내용은 ChatGPT의 지식에 따라 작성되었습니다. 특별한 변경 사항은 없습니다.
 
