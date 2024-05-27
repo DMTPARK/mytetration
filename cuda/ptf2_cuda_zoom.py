@@ -6,11 +6,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.ticker import ScalarFormatter
 import matplotlib.pyplot as plt
-# from tqdm import tqdm # ttk 사용으로 이제 쓸모 없음.
 import threading
 import time
 import timeit
-
 
 
 # 파라미터 - 플롯 영역 설정
@@ -44,7 +42,6 @@ def compute_tetration_divergence(nx, ny, max_iter, escape_radius, x0, y0, eps, e
 
     divergence_map = cp.zeros(c.shape, dtype=cp.bool_)
     update_frequency = max_iter // 10  # Progress bar 10% 단위로 업데이트
-
 
     for i in range(max_iter):
         cp.power(c, z, out=z)
@@ -80,9 +77,12 @@ def plot_tetration(app, ax, x0, y0, eps, eps_y):
 
     app.set_calculation_status(True)  # 계산이 시작되었음을 알림
     divergence_map = compute_tetration_divergence(nx, ny, max_iter, escape_radius, x0, y0, eps, eps_y, progress_callback)
+
     cmap = LinearSegmentedColormap.from_list("custom_cmap", ["black", "white"])
+    norm = plt.Normalize(vmin=0, vmax=1) # 플롯 전체가 white 일때, 전체가 black 으로 표현되는 증상 해결
+
     ax.clear()
-    ax.imshow(cp.asnumpy(divergence_map).T, extent=[x0 - eps, x0 + eps, y0 - eps_y, y0 + eps_y], origin='lower', cmap=cmap)
+    ax.imshow(cp.asnumpy(divergence_map).T, extent=[x0 - eps, x0 + eps, y0 - eps_y, y0 + eps_y], origin='lower', cmap=cmap, norm=norm)
     ax.set_xlabel('Re')
     ax.set_ylabel('Im')
     ax.set_title(f"Tetration Plot at x={x0}, y={y0}, eps={eps}")
@@ -121,7 +121,9 @@ class ZoomApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Zoom Application")
-        self.calculation_in_progress = False  # 계산 진행 상태를 추적하는 변수 추가
+        self.calculation_in_progress = False
+
+        self.invert_zoom = tk.BooleanVar(value=False)
 
         self.figure = Figure(figsize=(8, 6), dpi=100)
         self.ax = self.figure.add_subplot(111)
@@ -132,19 +134,22 @@ class ZoomApp:
         self.toolbar_frame = tk.Frame(self.root)
         self.toolbar_frame.pack(side=tk.TOP, fill=tk.X)
 
-        self.zoom_factors = [10, 100, 1000, 10000, 100000]
-        self.buttons = []
         self.zoom_out_label = ttk.Label(self.toolbar_frame, text="Zoom Out: ")
         self.zoom_out_label.pack(side=tk.LEFT)
+
+        self.invert_zoom_checkbox = ttk.Checkbutton(self.toolbar_frame, text="Invert Zoom", variable=self.invert_zoom, command=self.toggle_invert_zoom)
+        self.invert_zoom_checkbox.pack(side=tk.LEFT)
+
+        self.zoom_factors = [10, 100, 1000, 10000, 100000]
+        self.buttons = []
         for factor in self.zoom_factors:
-            button = ttk.Button(self.toolbar_frame, text=f"1/{factor}", command=lambda f=factor: self.zoom_out(f))
+            button = ttk.Button(self.toolbar_frame, text=f"1/{factor}", command=lambda f=factor: self.zoom(f))
             button.pack(side=tk.LEFT)
             self.buttons.append(button)
 
         self.status_label = tk.Label(self.root, text="Program Status: Ready")
         self.status_label.pack(side=tk.BOTTOM, fill=tk.X)
 
-        # Progressbar 추가
         self.progress = ttk.Progressbar(self.root, orient="horizontal", length=300, mode="determinate")
         self.progress.pack(side=tk.BOTTOM, fill=tk.X)
 
@@ -191,12 +196,34 @@ class ZoomApp:
     def plot_initial(self):
         threading.Thread(target=self.update_plot_with_thread, args=(x0, y0, eps, eps_y)).start()
 
-    def zoom_out(self, factor):
+    def toggle_invert_zoom(self):
+        if self.invert_zoom.get():
+            self.zoom_out_label.config(text="Zoom In: ")
+            for i, factor in enumerate(self.zoom_factors):
+                self.buttons[i].config(text=str(factor))
+        else:
+            self.zoom_out_label.config(text="Zoom Out: ")
+            for i, factor in enumerate(self.zoom_factors):
+                self.buttons[i].config(text=f"1/{factor}")
+
+    def zoom(self, factor):
         self.set_calculation_status(True)
         self.progress["value"] = 0
         global x0, y0, eps, eps_y
-        eps *= factor  # Zoom Out을 위해 eps를 곱해줍니다.
-        eps_y *= factor  # Zoom Out을 위해 eps_y를 곱해줍니다.
+        if self.invert_zoom.get():
+            # Zoom In을 위해 빨간 사각형 표시
+            new_eps = eps / factor
+            new_eps_y = eps_y / factor
+            rect = plt.Rectangle((x0 - new_eps, y0 - new_eps_y), 2 * new_eps, 2 * new_eps_y, linewidth=2, edgecolor='r', facecolor='none')
+            self.ax.add_patch(rect)
+            self.canvas.draw()
+
+            eps = new_eps
+            eps_y = new_eps_y
+        else:
+            eps *= factor
+            eps_y *= factor
+
         threading.Thread(target=self.update_plot_with_thread, args=(x0, y0, eps, eps_y)).start()
 
     def update_entries(self):
@@ -252,7 +279,6 @@ class ZoomApp:
         self.set_calculation_status(False)
         self.status_label.config(text="Click two points to Zoom In.")
         self.canvas.draw()
-
 
     def copy_to_clipboard(self):
         self.root.clipboard_clear()
