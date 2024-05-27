@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, filedialog, messagebox
+from PIL import Image, ImageTk
 import cupy as cp
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -9,6 +10,8 @@ import matplotlib.pyplot as plt
 import threading
 import time
 import timeit
+import os
+from datetime import datetime
 
 
 # 파라미터 - 플롯 영역 설정
@@ -174,6 +177,10 @@ class ZoomApp:
         self.copy_button = ttk.Button(self.controls_frame, text="Copy", command=self.copy_to_clipboard)
         self.copy_button.pack(side=tk.LEFT)
 
+        # 내부 아이콘을 사용하여 버튼 생성
+        self.save_button = ttk.Button(self.controls_frame, text="Save\n.png", command=self.save_image)
+        self.save_button.pack(side=tk.RIGHT)
+
         self.cid_click = self.canvas.mpl_connect('button_press_event', lambda event: on_click(event, self))
         self.cid_move = self.canvas.mpl_connect('motion_notify_event', lambda event: on_move(event, self))
 
@@ -284,6 +291,27 @@ class ZoomApp:
         self.root.clipboard_clear()
         self.root.clipboard_append(f"x={x0}, y={y0}, eps={eps}")
         self.status_label.config(text="Copied to clipboard!")
+
+    def save_image(self):
+        # 현재 날짜를 이용하여 폴더 이름 생성
+        today_date = datetime.today().strftime("%Y-%m-%d")
+        # 현재 스크립트가 위치한 디렉토리 경로 가져오기
+        script_dir = os.path.dirname(__file__)
+        # 오늘 날짜로 된 폴더 경로 생성
+        folder_path = os.path.join(script_dir, today_date)
+        # 폴더가 없는 경우 생성
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+        # 파일명을 직접 지정하지 않고, 일관된 형식으로 파일을 저장
+        filename = f"mytetration_x{self.current_x0}_y{self.current_y0}_eps{self.current_eps}.png"
+        try:
+            # 파일을 오늘 날짜로 된 폴더에 저장
+            filepath = os.path.join(folder_path, filename)
+            self.figure.savefig(filepath, bbox_inches='tight')
+            self.status_label.config(text="Image saved successfully at: " + filepath)
+        except Exception as e:
+            self.status_label.config(text=f"Error occurred while saving: {str(e)}")
+            
 
 if __name__ == "__main__":
     root = tk.Tk()
